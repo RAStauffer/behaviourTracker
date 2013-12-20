@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 3.3.10
+- http://www.phpmyadmin.net
+-
+- Host: devuserdb4.cisme8plcp0e.us-east-1.rds.amazonaws.com
+- Generation Time: Dec 20, 2013 at 02:03 PM
+- Server version: 5.1.63
+- PHP Version: 5.3.8-ZS5.5.0
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="<DB>" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="beh_log">
+                CREATE TABLE `beh_log` (
+                  `id` int(10) NOT NULL,
+                  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                  `entry` varchar(2000) NOT NULL,
+                  `trig_id` int(10) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="beh_response">
+                CREATE TABLE `beh_response` (
+                  `id` int(10) NOT NULL,
+                  `title` varchar(255) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="beh_trigger">
+                CREATE TABLE `beh_trigger` (
+                  `id` int(10) NOT NULL,
+                  `title` varchar(255) NOT NULL,
+                  `responseid1` int(10) DEFAULT NULL,
+                  `responseid2` int(10) DEFAULT NULL,
+                  `responseid3` int(10) DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+</pma_xml_export>

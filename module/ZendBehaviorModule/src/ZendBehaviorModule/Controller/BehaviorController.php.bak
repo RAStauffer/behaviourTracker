@@ -1,0 +1,42 @@
+<?php
+/**
+ * Zend Framework (http://framework.zend.com/)
+ *
+ * @link      http://github.com/zendframework/ZendBehaviorModule for the canonical source repository
+ * @copyright Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+ * @license   http://framework.zend.com/license/new-bsd New BSD License
+ */
+
+namespace ZendBehaviorModule\Controller;
+
+use Zend\Mvc\Controller\AbstractActionController;
+
+class BehaviorController extends AbstractActionController
+{
+	protected $beh_logTable;
+
+	public function indexAction()
+	{
+ 		{
+			return new ViewModel(array(
+					'beh_logs' => $this->getbeh_logTable()->fetchAll(),
+			));
+		}
+ 	}
+
+	public function fooAction()
+	{
+		// This shows the :controller and :action parameters in default route
+		// are working when you browse to /module-specific-root/Behavior/foo
+		return array();
+	}
+
+	public function getbeh_logTable()
+	{
+		if (!$this->beh_logTable) {
+			$sm = $this->getServiceLocator();
+			$this->beh_logTable = $sm->get('ZendBehaviorModule\Model\BehaviorTable');
+		}
+		return $this->beh_logTable;
+	}
+}
