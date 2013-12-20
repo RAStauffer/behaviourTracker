@@ -1,4 +1,7 @@
-ZendSkeletonApplication
+Basic Form / MySQL application using Zend Framework 2
+
+------------------------------------------------------------------
+ZendSkeletonApplication (ZF2 information)
 =======================
 
 Introduction
