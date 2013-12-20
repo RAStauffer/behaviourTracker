@@ -1,4 +1,5 @@
 Basic Form / MySQL application using Zend Framework 2
+The ZF2 vendor library is not included in this repository.
 
 ------------------------------------------------------------------
 ZendSkeletonApplication (ZF2 information)
