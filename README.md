@@ -5,10 +5,8 @@ using ZendSkeletonApplication
 
 Introduction
 ------------
-This is a simple, skeleton application using the ZF2 MVC layer and module
-systems. This application is meant to be used as a starting place for those
-looking to get their feet wet with ZF2.
-
+I used the ZF2 skeleton application to create a ZF2 MVC layer and modules
+for a Behavior Tracking database application.
 
 Installation
 ------------
