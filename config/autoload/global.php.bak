@@ -10,13 +10,12 @@
  * control, so do not include passwords or other sensitive information in this
  * file.
  * DB is venaura-db on phpcloud.com
- * mysql:dbname=staufr_aim;host=localhost
  */
 
 return array(
     'db' => array(
         'driver'         => 'Pdo',
-        'dsn'            => 'mysql:dbname=venaura;host=localhost',
+        'dsn'            => 'mysql:dbname=venaura-db;host=localhost',
         'driver_options' => array(
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
         ),

@@ -23,7 +23,7 @@ class beh_trigger
 	public $title;
 	public $response1;
 	public $response2;
-	public $rasponse3;
+	public $response3;
 	
 	public function exchangeArray($data)
 	{

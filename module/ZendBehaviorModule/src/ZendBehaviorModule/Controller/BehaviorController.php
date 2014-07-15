@@ -13,6 +13,7 @@ namespace ZendBehaviorModule\Controller;
 //session_start();
 
 use Zend\Mvc\Controller\AbstractActionController, Zend\View\Model\ViewModel;
+use ZendBehaviorModule\Model as behModel;
 
 class BehaviorController extends AbstractActionController
 {
@@ -45,8 +46,8 @@ class BehaviorController extends AbstractActionController
 	public function readformAction()
 	{
 
-		$beh_response->title = $_POST["newResponse"];                //TODO create beh_response object and exchange_data
-		$behResp = new beh_response();
+$beh_response->title = $_POST["newResponse"];                //TODO create beh_response object and exchange_data
+		$behResp = new behModel\beh_response;
 		$behResp->exchangeArray($beh_response);
 		$resp_id = $this->getbeh_responseTable()->add($behResp);
 		
@@ -54,13 +55,13 @@ class BehaviorController extends AbstractActionController
 		$beh_trigger->response1 = $resp_id;
 		$beh_trigger->response2 = 2;
 		$beh_trigger->response3 = 3;
-		$behTrig = new beh_trigger();
+		$behTrig = new behModel\behModel\beh_trigger;
 		$behTrig->exchangeArray($beh_trigger);
 		$trig_id = $this->getbeh_triggerTable()->add($behTrig);
 		
 		$beh_log->entry = $_POST["logentry"];
 		$beh_log->trig_id = $trig_id;
-		$behLog = new beh_log();
+		$behLog = new behModel\beh_log;
 		$behLog->exchangeArray($behLog);
 		
 		$this->getbeh_logTable()->add($behLog);

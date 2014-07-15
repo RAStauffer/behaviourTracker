@@ -1,5 +1,5 @@
 <?php
-// My phpcloud db localhost user is staufr_ron;yabbadabba
+// My phpcloud db
 return array(
     'db' => array(
         'username' => 'venaura',
