@@ -1,5 +1,6 @@
-ZendSkeletonApplication
-=======================
+Behavior Tracking Application
+using ZendSkeletonApplication
+=============================
 
 Introduction
 ------------
