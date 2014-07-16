@@ -126,7 +126,8 @@ class beh_triggerTable
 		);
 	
 
-		return $this->tableGateway->insert($data);
+		$this->tableGateway->insert($data);
+		return $this->tableGateway->lastInsertValue;
 	}
 	
 	public function delete($id)
@@ -188,7 +189,8 @@ class beh_responseTable
 		);
 	
 		
-		return $this->tableGateway->insert($data);
+		$this->tableGateway->insert($data);
+		return $this->tableGateway->lastInsertValue;
 	}
 	
 	public function delete($id)
