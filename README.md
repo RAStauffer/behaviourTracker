@@ -5,7 +5,7 @@ using ZendSkeletonApplication
 
 Introduction
 ------------
-I used the ZF2 skeleton application to create a ZF2 MVC layer and new modules
+I used the ZF2 skeleton application and reworked the album example to create a ZF2 MVC layer and new modules
 for a Behavior Tracking database application.
 
 Installation
