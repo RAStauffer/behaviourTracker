@@ -45,24 +45,26 @@ class BehaviorController extends AbstractActionController
 	
 	public function readformAction()
 	{
-
-$beh_response->title = $_POST["newResponse"];                //TODO create beh_response object and exchange_data
+		$beh_response = array();
+		$beh_response['title'] = $_POST["newResponse"];                //TODO create beh_response object and exchange_data
 		$behResp = new behModel\beh_response;
 		$behResp->exchangeArray($beh_response);
 		$resp_id = $this->getbeh_responseTable()->add($behResp);
 		
-		$beh_trigger->title = $_POST["newTrigger"];
-		$beh_trigger->response1 = $resp_id;
-		$beh_trigger->response2 = 2;
-		$beh_trigger->response3 = 3;
-		$behTrig = new behModel\behModel\beh_trigger;
+		$beh_trigger = array();
+		$beh_trigger['title'] = $_POST["newTrigger"];
+		$beh_trigger['response1'] = $resp_id;
+		$beh_trigger['response2'] = 2;
+		$beh_trigger['response3'] = 3;
+		$behTrig = new behModel\beh_trigger;
 		$behTrig->exchangeArray($beh_trigger);
 		$trig_id = $this->getbeh_triggerTable()->add($behTrig);
 		
-		$beh_log->entry = $_POST["logentry"];
-		$beh_log->trig_id = $trig_id;
+		$beh_log = array();
+		$beh_log['entry'] = $_POST["logentry"];
+		$beh_log['trig_id'] = $trig_id;
 		$behLog = new behModel\beh_log;
-		$behLog->exchangeArray($behLog);
+		$behLog->exchangeArray($beh_log);
 		
 		$this->getbeh_logTable()->add($behLog);
 	}

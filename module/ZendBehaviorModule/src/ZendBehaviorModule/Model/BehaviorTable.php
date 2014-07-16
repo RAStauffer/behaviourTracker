@@ -98,9 +98,9 @@ class beh_triggerTable
 	{
 		$data = array(
 				'title' => $beh_trigger->title,
-				'response1'  => $beh_trigger->response1,
-				'response2'  => $beh_trigger->response2,
-				'response3'  => $beh_trigger->response3
+				'responseid1'  => $beh_trigger->response1,
+				'responseid2'  => $beh_trigger->response2,
+				'responseid3'  => $beh_trigger->response3
 		);
 
 		$id = (int)$beh_trigger->id;
@@ -120,9 +120,9 @@ class beh_triggerTable
 	{
 		$data = array(
 				'title' => $beh_trigger->title,
-				'response1'  => $beh_trigger->response1,
-				'response2'  => $beh_trigger->response2,
-				'response3'  => $beh_trigger->response3
+				'responseid1'  => $beh_trigger->response1,
+				'responseid2'  => $beh_trigger->response2,
+				'responseid3'  => $beh_trigger->response3
 		);
 	
 
